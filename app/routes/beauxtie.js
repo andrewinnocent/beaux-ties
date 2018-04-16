@@ -2,6 +2,7 @@ import Route from '@ember/routing/route'
 
 export default Route.extend({
   model (params) {
-    return this.get('store').findRecord('beauxtie', params.beauxtie_id)
+    console.log('params is', params)
+    return this.get('store').findRecord('beauxtie', params.bow_id)
   }
 })
