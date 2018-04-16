@@ -1,0 +1,13 @@
+Beauxties Rendering? NOPE: 404 (issue 1056)
+
+<div>
+
+{{#each model as |beauxtie|}}
+
+  {{#link-to 'beauxtie' beauxtie}}<img src={{model.image}}>
+  <h3>{{model.name}}</h3>{{/link-to}}
+  <h3>${{model.price}}</h3>
+  <h3>{{model.style}}</h3>
+
+{{/each}}
+</div>

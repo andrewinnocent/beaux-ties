@@ -11,6 +11,8 @@ Router.map(function () {
   this.route('sign-in')
   this.route('change-password')
   this.route('users')
+  this.route('beauxties')
+  this.route('beauxtie', {path: 'beauxties/:beauxtie_id'})
 })
 
 export default Router
