@@ -5,6 +5,6 @@
 <h3>${{model.price}}</h3>
 
 {{bow-quantity bow=model changeQuantity='changeQuantity'}}
-<button>Add to Cart {{#link-to 'carts'}}{{fa-icon "cart-plus"}}{{/link-to}}</button>
+{{add-to-cart}}
 
 <div>{{#link-to 'bows'}}Back to All Beaux-Ties{{/link-to}}</div>
