@@ -4,7 +4,7 @@
 <p>{{model.description}}</p>
 <h3>${{model.price}}</h3>
 
-<h4>Qty Placeholder: 1</h4>
+{{bow-quantity bow=model changeQuantity='changeQuantity'}}
 <button>Add to Cart</button>
 
 <div>{{#link-to 'bows'}}Back to All Beaux-Ties{{/link-to}}</div>
