@@ -1,0 +1,11 @@
+<div>
+
+{{#each model as |bow|}}
+
+  {{#link-to 'bow' bow}}<img src={{bow.image}}>
+  <h3>{{bow.name}}</h3>{{/link-to}}
+  <h3>${{bow.price}}</h3>
+  <h3>{{bow.style}}</h3>
+
+{{/each}}
+</div>
