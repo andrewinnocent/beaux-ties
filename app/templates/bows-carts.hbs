@@ -1,7 +1,11 @@
 <h2>Cart Page!</h2>
+  <ol>
 {{#each model as |bow|}}
-  {{bow.bowId}}
+
+    <li> {{bow.bowId.name}} </li>
+
 {{/each}}
+  </ol>
 <div>
   <button class="btn btn-success"> Checkout </button>
 </div>
