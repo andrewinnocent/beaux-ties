@@ -5,5 +5,10 @@ import { inject as service } from '@ember/service'
 export default Component.extend({
   auth: service(),
   user: alias('auth.credentials.email'),
-  isAuthenticated: alias('auth.isAuthenticated')
+  isAuthenticated: alias('auth.isAuthenticated'),
+  actions: {
+    addToCart () {
+      this.sendAction('addToCart', this.get('bow'))
+    }
+  }
 })
