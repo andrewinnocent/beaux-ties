@@ -3,7 +3,8 @@
     <div class="thumbnail">
       {{#link-to 'bow' bow}}<img src={{bow.image}} alt="{{bow.name}}">{{/link-to}}
       <div class="caption">
-        {{#link-to 'bow' bow}}<h3>{{bow.name}}</h3>{{/link-to}}
+        {{#link-to 'bow' bow}}<h3>{{bow.name}}</h3>
+        More Details{{/link-to}}
         <h4>{{bow.style}}</h4>
         <h3>${{bow.price}}</h3>
         {{#if isAuthenticated}}
