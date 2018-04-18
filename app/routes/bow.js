@@ -7,8 +7,9 @@ export default Route.extend({
   },
   actions: {
     addToCart (addBow) {
-      // this.get('store').createRecord('bow', addBow)
-      // this.save()
+      console.log(addBow)
+      const addNewBow = this.get('store').createRecord('bows-cart', { bow: addBow })
+      addNewBow.save()
     }
   }
 })
