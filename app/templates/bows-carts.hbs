@@ -1,0 +1,10 @@
+<h2>Cart Page!</h2>
+{{#each model as |bow|}}
+  {{bow.bowId}}
+{{/each}}
+<div>
+  <button class="btn btn-success"> Checkout </button>
+</div>
+<div>
+  {{#link-to 'bows'}}Back to Shopping{{/link-to}}
+</div>

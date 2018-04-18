@@ -11,9 +11,9 @@ Router.map(function () {
   this.route('sign-in')
   this.route('change-password')
   this.route('users')
-  this.route('carts', {path: 'cart'})
   this.route('bows', {path: '/'})
   this.route('bow', {path: '/beauxties/:bow_id'})
+  this.route('bows_carts', {path: 'cart'})
 })
 
 export default Router

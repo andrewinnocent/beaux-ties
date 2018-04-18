@@ -6,8 +6,9 @@ export default Route.extend({
     return this.get('store').findRecord('bow', params.bow_id)
   },
   actions: {
-    changeQuantity (qty) {
-      // should this be handled in the Cart? Easier?
+    addToCart (addBow) {
+      // this.get('store').createRecord('bow', addBow)
+      // this.save()
     }
   }
 })
