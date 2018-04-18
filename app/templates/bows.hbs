@@ -1,11 +1,26 @@
-<div>
-
 {{#each model as |bow|}}
+  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="row">
+      <div class="thumbnail">
+        {{#link-to 'bow' bow}}<img src={{bow.image}} alt="{{bow.name}}">{{/link-to}}
+        <div class="caption">
+          {{#link-to 'bow' bow}}<h3>{{bow.name}}</h3>{{/link-to}}
+          <h4>{{bow.style}}</h4>
+          <h3>${{bow.price}}</h3>
 
-  {{#link-to 'bow' bow}}<img src={{bow.image}}>
+        </div>
+        {{#if isAuthenticated}}
+        {{add-to-cart}}
+        {{else}}
+        {{#link-to 'sign-up'}} Sign Up {{/link-to}} or {{#link-to 'sign-in'}} Sign In to Shop {{/link-to}}
+        {{/if}}
+      </div>
+    </div>
+
+  {{!-- {{#link-to 'bow' bow}}<img src={{bow.image}}>
   <h3>{{bow.name}}</h3>{{/link-to}}
   <h3>${{bow.price}}</h3>
-  <h3>{{bow.style}}</h3>
+  <h3>{{bow.style}}</h3> --}}
 
-{{/each}}
 </div>
+{{/each}}
