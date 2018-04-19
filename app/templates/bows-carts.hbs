@@ -1,4 +1,4 @@
-<h2>Cart Page!</h2>
+<h2>Shopping Cart</h2>
   <ol>
 {{#each model as |bowsCart|}}
 
@@ -6,6 +6,9 @@
 
 {{/each}}
   </ol>
+  <div>
+    <h3>Total: </h3>
+  </div>
 <div>
   {{checkout-button checkout='checkout'}}
 </div>
