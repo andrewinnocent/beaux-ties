@@ -3,16 +3,16 @@
     <div class="thumbnail">
       {{#link-to 'bow' bow}}<img src={{bow.image}} alt="{{bow.name}}">{{/link-to}}
       <div class="caption">
-        {{#link-to 'bow' bow}}<h3>{{bow.name}}</h3>
-        More Details{{/link-to}}
-        <h4>{{bow.style}}</h4>
-        <h3>${{bow.price}}</h3>
+        {{#link-to 'bow' bow}}<h3 class="text-center">{{bow.name}}</h3>
+        <p class="text-center">More Details</p>{{/link-to}}
+        <h4 class="text-center">{{bow.style}}</h4>
+        <h3 class="text-center">${{bow.price}}</h3>
         {{#if isAuthenticated}}
         {{!-- <h4>Add to Wishlist {{wishlist-checkbox}}</h4> --}}
-        {{wishlist-button}}
-        {{add-to-cart bow=bow addToCart='addToCart'}}
+        <p class="text-center">{{wishlist-button}}</p>
+        <p class="text-center">{{add-to-cart bow=bow addToCart='addToCart'}}</p>
         {{else}}
-        {{#link-to 'sign-up'}} Sign Up {{/link-to}} or {{#link-to 'sign-in'}} Sign In to Shop {{/link-to}}
+        <p class="text-center">{{#link-to 'sign-up'}} Sign Up {{/link-to}} or {{#link-to 'sign-in'}} Sign In to Shop {{/link-to}}</p>
         {{/if}}
       </div>
     </div>

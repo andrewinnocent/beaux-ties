@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="thumbnail">
+      <img src={{bow.image}} alt={{bow.image}}>
+
+    </div>
+  </div>
+  <div class="col-md-6 col-md-4">
+    <div class="caption">
+      <h3>{{bow.name}} {{bow.style}}</h3>
+      <h5>{{bow.fabric}} {{bow.color}}</h5>
+      <p>{{bow.description}}</p>
+      <h3>${{bow.price}}</h3>
+
+      {{#if isAuthenticated}}
+      {{!-- <h4>Add to Wishlist {{wishlist-checkbox}}</h4> --}}
+      {{wishlist-button}}
+      {{add-to-cart bow=bow addToCart='addToCart'}}
+      {{else}}
+      {{#link-to 'sign-up'}} Sign Up {{/link-to}} or {{#link-to 'sign-in'}} Sign In to Shop {{/link-to}}
+      {{/if}}
+      <br>
+      <br>
+      <p>{{#link-to 'bows'}}Back to All Beaux-Ties{{/link-to}}</p>
+    </div>
+  </div>
+</div>
