@@ -2,7 +2,7 @@
   <ol>
 {{#each model as |bowsCart|}}
 
-    <li> {{bowsCart.bow.name}} </li>
+    <li> {{bowsCart.bow.name}} {{remove-bow bow=bowsCart removeFromCart='removeFromCart'}} </li>
 
 {{/each}}
   </ol>
