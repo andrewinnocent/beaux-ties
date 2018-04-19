@@ -15,7 +15,7 @@ export default Route.extend({
       addNewBow.save()
     },
     addToWish (bowToAdd) {
-      console.log('bowToAdd is', bowToAdd)
+      // console.log('bowToAdd is', bowToAdd)
       const newWish = this.get('store').createRecord('wish', {
         bow: bowToAdd,
         active: true
