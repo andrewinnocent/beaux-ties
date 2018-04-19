@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('bows', {path: '/'})
   this.route('bow', {path: '/beauxties/:bow_id'})
   this.route('bows_carts', {path: 'cart'})
+  this.route('wishes')
 })
 
 export default Router
