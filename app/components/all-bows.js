@@ -9,6 +9,9 @@ export default Component.extend({
   actions: {
     addToCart () {
       this.sendAction('addToCart', this.get('bow'))
+    },
+    addToWish (wish) {
+      this.sendAction('addToWish', wish)
     }
   }
 })

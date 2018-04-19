@@ -7,9 +7,10 @@
         <p class="text-center">More Details</p>{{/link-to}}
         <h4 class="text-center">{{bow.style}}</h4>
         <h3 class="text-center">${{bow.price}}</h3>
+        <h3 class="text-center">Active: {{bow.wish.active}}</h3>
         {{#if isAuthenticated}}
         {{!-- <h4>Add to Wishlist {{wishlist-checkbox}}</h4> --}}
-        <p class="text-center">{{wishlist-button}}</p>
+        <p class="text-center">{{wishlist-star wish=bow.wish addWish='addToWish'}}</p>
         <p class="text-center">{{add-to-cart bow=bow addToCart='addToCart'}}</p>
         {{else}}
         <p class="text-center">{{#link-to 'sign-up'}} Sign Up {{/link-to}} or {{#link-to 'sign-in'}} Sign In to Shop {{/link-to}}</p>

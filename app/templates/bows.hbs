@@ -1,3 +1,3 @@
-{{#each model as |bow|}}
-{{all-bows bow=bow addToCart='addToCart'}}
+{{#each model.bows as |bow|}}
+{{all-bows bow=bow addToCart='addToCart' addToWish='addToWish'}}
 {{/each}}

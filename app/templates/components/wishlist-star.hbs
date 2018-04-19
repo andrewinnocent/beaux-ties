@@ -1,0 +1,8 @@
+{{!-- <p>Wishlist <span {{action 'addWish' wish}}>{{fa-icon "star"}}</span></p> --}}
+{{wish.active}}
+{{#if wish.active}}
+
+<p>Wishlist <span {{action 'addWish' wish}}>{{fa-icon "star"}}</span></p>
+{{else}}
+<p>Wishlist <span {{action 'removeWish' wish}}>{{fa-icon "star-o"}}</span></p>
+{{/if}}
