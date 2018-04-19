@@ -8,6 +8,9 @@ export default Route.extend({
     removeFromCart (removeBow) {
       removeBow.destroyRecord()
     //     .then(() => {this.transitionTo('bows'))
+    },
+    checkout () {
+      console.log('checkout clicked')
     }
   }
 })
