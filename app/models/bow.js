@@ -8,5 +8,8 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   price: DS.attr('number'),
   stockQuantity: DS.attr('number'),
-  image: DS.attr('string')
+  image: DS.attr('string'),
+  carts: DS.hasMany('cart'),
+  users: DS.hasMany('user'),
+  wish: DS.belongsTo('wish')
 })

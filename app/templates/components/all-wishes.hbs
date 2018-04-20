@@ -1,0 +1,21 @@
+{{#if wish.active}}
+<div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="row">
+    <div class="thumbnail">
+      <img src={{wish.bow.image}} alt="{{wish.bow.name}}">
+      <div class="caption">
+        <h2 class="text-center">{{wish.bow.name}}</h2>
+        <h4 class="text-center">{{wish.bow.style}}</h4>
+        <h5 class="text-center">{{wish.bow.fabric}} {{wish.bow.color}}</h5>
+        <p class="text-center">{{wish.bow.description}}</p>
+        <h3 class="text-center">${{wish.bow.price}}</h3>
+        {{!-- <h4>Remove from Wishlist {{wishlist-checkbox}}</h4> --}}
+        {{!-- {{remove-wishlist}} --}}
+        <p class="text-center">{{add-to-cart bow=bow addToCart='addToCart'}}</p>
+        <br>
+        <p class="text-center">{{#link-to 'bows'}}Back to All Beaux-Ties{{/link-to}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}

@@ -1,0 +1,17 @@
+<h2>Shopping Cart</h2>
+  <ol>
+{{#each model as |bowsCart|}}
+
+    <li> {{bowsCart.bow.name}} {{remove-bow bow=bowsCart removeFromCart='removeFromCart'}} </li>
+
+{{/each}}
+  </ol>
+  <div>
+    <h3>Total: Free-99!</h3>
+  </div>
+<div>
+  {{checkout-button checkout='checkout'}}
+</div>
+<div>
+  {{#link-to 'bows'}}Back to Shopping{{/link-to}}
+</div>

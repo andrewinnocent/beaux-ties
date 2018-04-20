@@ -1,0 +1,27 @@
+<div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="row">
+    <div class="thumbnail">
+      {{#link-to 'bow' bow}}<img src={{bow.image}} alt="{{bow.name}}">{{/link-to}}
+      <div class="caption">
+        {{#link-to 'bow' bow}}<h3 class="text-center">{{bow.name}}</h3>
+        <p class="text-center">More Details</p>{{/link-to}}
+        <h4 class="text-center">{{bow.style}}</h4>
+        <h3 class="text-center">${{bow.price}}</h3>
+        <h3 class="text-center">Active: {{bow.wish.active}}</h3>
+        {{#if isAuthenticated}}
+        <p class="text-center">
+          {{wishlist-star wish=bow.wish
+                          bow=bow
+                          addToWish='addToWish'}}
+        </p>
+        <p class="text-center">
+          {{add-to-cart bow=bow
+                        addToCart='addToCart'}}
+        </p>
+        {{else}}
+        <p class="text-center">{{#link-to 'sign-up'}} Sign Up {{/link-to}} or {{#link-to 'sign-in'}} Sign In to Shop {{/link-to}}</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
