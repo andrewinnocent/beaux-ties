@@ -5,6 +5,7 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
+        <li>{{#link-to "bows"}}Beaux-Ties{{/link-to}}</li>
         <li>{{#link-to "wishes"}}Wish List {{fa-icon "star"}}{{/link-to}}</li>
         {{/if}}
 
@@ -23,7 +24,7 @@
   </div>
 </nav>
 
-<p class="text-center"><img src="https://res.cloudinary.com/andrewinnocent/image/upload/v1524197709/Beaux_Ties_Final.png"></p>
+<p class="text-center">{{#link-to "bows"}}<img src="https://res.cloudinary.com/andrewinnocent/image/upload/v1524197709/Beaux_Ties_Final.png">{{/link-to}}</p>
 <h3 class="text-center lead font-italic">Bow-ties to Match Your Beauty</h3>
 
 

@@ -1,13 +1,26 @@
 import Route from '@ember/routing/route'
 import RSVP from 'rsvp'
 import { inject as service } from '@ember/service'
+import { alias } from '@ember/object/computed'
 
 export default Route.extend({
+  auth: service(),
+  // console.log('auth is', auth)
+  isAuthenticated: alias('auth.isAuthenticated'),
   model () {
-    return RSVP.hash({
-      bows: this.get('store').findAll('bow'),
-      wishes: this.get('store').findAll('wish')
-    })
+    // if !authenticated return /bow
+    // console.log('auth.isAuthenticated is', this.get('auth.isAuthenticated'))
+    if (this.get('isAuthenticated') === false) {
+      return RSVP.hash({
+        bows: this.get('store').findAll('bow')
+      })
+    } else {
+      // else return /bows & /wishes
+      return RSVP.hash({
+        bows: this.get('store').findAll('bow'), // this is `/`
+        wishes: this.get('store').findAll('wish')
+      })
+    }
   },
   notifications: service('toast'),
   actions: {
