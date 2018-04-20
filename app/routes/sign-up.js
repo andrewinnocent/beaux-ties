@@ -14,6 +14,13 @@ export default Route.extend({
     signUp (credentials) {
       this.get('auth').signUp(credentials)
         .then(() => this.get('auth').signIn(credentials))
+        .then((user) => {
+          console.log(user)
+          const cart = this.get('store').createRecord('cart', {
+            user
+          })
+          return cart.save()
+        })
         .then(() => this.transitionTo('application'))
         .then(() => {
           this.get('flashMessages')
