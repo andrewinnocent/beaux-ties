@@ -10,6 +10,8 @@ export default Route.extend({
     removeFromCart (removeBow) {
       removeBow.destroyRecord()
     //     .then(() => {this.transitionTo('bows'))
+      const notifications = this.get('notifications')
+      notifications.success('Go ahead and browse more Beaux-Ties!', 'Beaux-Tie Removed From Cart', {positionClass: 'toast-bottom-right'})
     },
     checkout () {
       // console.log('checkout clicked')

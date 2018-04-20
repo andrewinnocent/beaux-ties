@@ -9,6 +9,8 @@ export default Component.extend({
       // console.log('add to wish.active', this.get('wish.active'))
       if (this.get('wish.active') === undefined) {
         this.sendAction('addToWish', this.get('bow'))
+        this.toggleProperty('wish.active')
+        this.get('wish.content').save()
       } else {
         this.toggleProperty('wish.active')
         this.get('wish.content').save()
