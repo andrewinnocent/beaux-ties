@@ -30,10 +30,10 @@ export default Route.extend({
       const notifications = this.get('notifications')
       notifications.success('Your Beaux-Tie\'s been added!', 'Added to Cart', {positionClass: 'toast-bottom-right'})
     },
-    addToggleWish (bowToAddToggle) {
+    addToWish (bowToAdd) {
       // console.log('bowToAdd is', bowToAdd)
       const wish = this.get('store').createRecord('wish', {
-        bow: bowToAddToggle
+        bow: bowToAdd
       })
       wish.save()
       .then((wish) => {
@@ -41,9 +41,6 @@ export default Route.extend({
         return wish
       })
       .then((wish) => wish.save())
-
-      const notifications = this.get('notifications')
-      notifications.success('Your Beaux-Tie\'s been added!', 'Added to Wishlist', {positionClass: 'toast-bottom-right'})
     }
   }
 })
