@@ -7,12 +7,12 @@
         <p class="text-center">More Details</p>{{/link-to}}
         <h4 class="text-center">{{bow.style}}</h4>
         <h3 class="text-center">${{bow.price}}</h3>
-
+<h2>Active: {{bow.wish.active}}</h2>
         {{#if isAuthenticated}}
         <p class="text-center">
           {{wishlist-star wish=bow.wish
                           bow=bow
-                          addToWish='addToWish'}}
+                          toggleWish='toggleWish'}}
         </p>
         <p class="text-center">
           {{add-to-cart bow=bow

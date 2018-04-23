@@ -30,13 +30,18 @@ export default Route.extend({
       const notifications = this.get('notifications')
       notifications.success('Your Beaux-Tie\'s been added!', 'Added to Cart', {positionClass: 'toast-bottom-right'})
     },
-    addToWish (bowToAdd) {
+    addToggleWish (bowToAddToggle) {
       // console.log('bowToAdd is', bowToAdd)
-      const newWish = this.get('store').createRecord('wish', {
-        bow: bowToAdd,
-        active: true
+      const wish = this.get('store').createRecord('wish', {
+        bow: bowToAddToggle
       })
-      newWish.save()
+      wish.save()
+      .then((wish) => {
+        wish.toggleProperty('active')
+        return wish
+      })
+      .then((wish) => wish.save())
+
       const notifications = this.get('notifications')
       notifications.success('Your Beaux-Tie\'s been added!', 'Added to Wishlist', {positionClass: 'toast-bottom-right'})
     }
