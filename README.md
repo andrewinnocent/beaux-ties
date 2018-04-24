@@ -61,7 +61,7 @@ With only four days of EmberJS training in the classroom, it was a HUGE learning
 
 - Order history
 - Proper shopping cart functionality (summarize by bow-tie name, render total price, change quantity, etc.)
-  - Strip API
+  - Stripe API
 - Search by color or style
 - Wishlist functionality in /beauxs/:id view
 - Remove bow-ties in /wishlist view
