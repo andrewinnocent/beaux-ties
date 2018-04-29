@@ -3,3 +3,27 @@
 body {
   background-color: #e3efff;
 }
+
+@media (max-width: 599px) {
+  .main-logo {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 600px) {
+  .main-logo {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 900px) {
+  .main-logo {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-logo {
+    max-width: 500px;
+  }
+}
