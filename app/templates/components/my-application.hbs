@@ -24,6 +24,11 @@
   </div>
 </nav>
 
+{{#if isAuthenticated}}
+{{else}}
+<div class="panel panel-warning"><h4 class="text-center demo">For your convenience, sign in with 'demo@email.com' & 'demo'.</h4></div>
+{{/if}}
+
 <p class="text-center">{{#link-to "bows"}}<img src="https://res.cloudinary.com/andrewinnocent/image/upload/v1524197709/Beaux_Ties_Final.png" class="main-logo">{{/link-to}}</p>
 <h3 class="text-center lead font-italic">Bow-ties to Match Your Beauty</h3>
 
