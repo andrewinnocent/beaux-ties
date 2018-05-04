@@ -2,5 +2,6 @@ import DS from 'ember-data'
 
 export default DS.Model.extend({
   cart: DS.belongsTo('cart'),
-  bow: DS.belongsTo('bow')
+  bow: DS.belongsTo('bow'),
+  total: DS.attr('number')
 })
