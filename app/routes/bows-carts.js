@@ -16,7 +16,7 @@ export default Route.extend({
     checkout () {
       // console.log('checkout clicked')
       const notifications = this.get('notifications')
-      notifications.info('Sorry for the incovenience! Checkout is not available, yet.', 'That\'s awkward...', {positionClass: 'toast-bottom-right'})
+      notifications.info('Checkout is not actually available.', 'It\'s a demo!', {positionClass: 'toast-bottom-right'})
     }
   }
 })
