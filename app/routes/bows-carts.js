@@ -14,7 +14,6 @@ export default Route.extend({
       notifications.success('Go ahead and browse more Beaux-Ties!', 'Beaux-Tie Removed From Cart', {positionClass: 'toast-bottom-right'})
     },
     checkout () {
-      // console.log('checkout clicked')
       const notifications = this.get('notifications')
       notifications.info('Checkout is not actually available.', 'It\'s a demo!', {positionClass: 'toast-bottom-right'})
     }

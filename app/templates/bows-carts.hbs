@@ -1,6 +1,5 @@
 <h2>Shopping Cart</h2>
 <div class="well">
-  {{#if model}}
 
   <ul class="list-group">
 {{#each model as |bowsCart|}}
@@ -18,25 +17,29 @@
       </div>
     </li>
 
-    {{!-- {{bowsCart.total}} --}}
+{{else}}
+
+  <div>
+    <h3>{{#link-to 'bows'}}Add Beaux-Ties to Your Cart!{{/link-to}}</h3>
+  </div>
+
 {{/each}}
 </ul>
-{{!-- <div class="total">
-  <h3>Total: ${{bowsCart.total}}</h3>
-</div> --}}
-{{else}}
-<div>
-  <h3>{{#link-to 'bows'}}Add Beaux-Ties to Your Cart!{{/link-to}}</h3>
-</div>
-{{/if}}
+
+  <div>
+    {{#if model}}
+    <h3>Total: ${{number-format model.firstObject.total decimals=2}}</h3>
+    {{else}}
+    <h3>Total: $0.00</h3>
+    {{/if}}
+  </div>
+
 </div>
 
-  {{!-- <div>
-    <h3>Total: ${{log model}}</h3>
-  </div> --}}
 <div>
   {{checkout-button checkout='checkout'}}
 </div>
+
 <div>
   {{#link-to 'bows'}}Back to Shopping{{/link-to}}
 </div>
