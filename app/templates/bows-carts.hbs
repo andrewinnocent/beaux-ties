@@ -28,7 +28,7 @@
 
   <div>
     {{#if model}}
-    <h3>Total: ${{model.firstObject.total}}</h3>
+    <h3>Total: ${{number-format model.firstObject.total decimals=2}}</h3>
     {{else}}
     <h3>Total: $0.00</h3>
     {{/if}}
