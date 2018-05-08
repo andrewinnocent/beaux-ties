@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service'
 
 export default Route.extend({
   model () {
+    // console.log(this.get('store').findAll('bows-cart'))
     return this.get('store').findAll('bows-cart')
   },
   notifications: service('toast'),

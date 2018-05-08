@@ -28,14 +28,13 @@
 
   <div>
     {{#if model}}
-    <h3>Total: ${{model.content.firstObject._data.total}}</h3>
+    <h3>Total: ${{model.firstObject.total}}</h3>
     {{else}}
     <h3>Total: $0.00</h3>
     {{/if}}
   </div>
 
 </div>
-{{log model.content}}
 
 <div>
   {{checkout-button checkout='checkout'}}
