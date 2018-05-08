@@ -29,17 +29,16 @@
   <div>
     {{#if model}}
     <h3>Total: ${{number-format model.firstObject.total decimals=2}}</h3>
+    <div>
+      {{checkout-button checkout='checkout'}}
+    </div>
+
+    <div>
+      {{#link-to 'bows'}}Back to Shopping{{/link-to}}
+    </div>
     {{else}}
     <h3>Total: $0.00</h3>
     {{/if}}
   </div>
 
-</div>
-
-<div>
-  {{checkout-button checkout='checkout'}}
-</div>
-
-<div>
-  {{#link-to 'bows'}}Back to Shopping{{/link-to}}
 </div>
