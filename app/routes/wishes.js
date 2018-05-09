@@ -1,10 +1,14 @@
 import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
+// import { computed } from '@ember/object'
 
 export default Route.extend({
   model () {
     return this.get('store').findAll('wish')
   },
+  // notActive: computed('model.@each.active', function () {
+  //   if (model.active)
+  // }),
   notifications: service('toast'),
   actions: {
     addToCart (bow) {
