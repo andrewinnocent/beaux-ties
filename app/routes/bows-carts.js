@@ -13,9 +13,18 @@ export default Route.extend({
       const notifications = this.get('notifications')
       notifications.success('Go ahead and browse more Beaux-Ties!', 'Beaux-Tie Removed From Cart', {positionClass: 'toast-bottom-right'})
     },
-    checkout () {
+    checkout (model) {
+      console.log('In bows-cart', model.content) // an Ember array
+      // for (let i = 0; i < model.content.length; i++) {
+      //   model.content[i].destroyRecord() // not a function on undefined...
+      // }
+      // this.get('model').content.forEach(function (rec) {
+      //   rec.destroyRecord()
+      // })
+      // this.store.unloadRecord() // clears store but not record
+
       const notifications = this.get('notifications')
-      notifications.info('Checkout is not actually available.', 'It\'s a demo!', {positionClass: 'toast-bottom-right'})
+      notifications.info('More checkout functionality to come.', 'It\'s a demo!', {positionClass: 'toast-bottom-right'})
     }
   }
 })
