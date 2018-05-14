@@ -1,5 +1,5 @@
 {{#if wish.active}}
-<p>Wishlist <button {{action 'removeFromWish'}}>{{fa-icon "star"}}</button></p>
+<button class="btn" {{action 'removeFromWish'}}>Wish List {{fa-icon "star"}}</button>
 {{else}}
-<p>Wishlist <button {{action 'addToWish'}}>{{fa-icon "star-o"}}</button></p>
+<button class="btn" {{action 'addToWish'}}> Wish List {{fa-icon "star-o"}}</button>
 {{/if}}

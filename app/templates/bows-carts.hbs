@@ -1,4 +1,4 @@
-<h2>Shopping Cart</h2>
+<h2 class="text-center">Shopping Cart</h2>
 <div class="well">
 
   <ul class="list-group">
@@ -30,7 +30,7 @@
     {{#if model}}
     <h3>Total: ${{number-format model.firstObject.total decimals=2}}</h3>
     <div>
-      {{checkout-button checkout='checkout'}}
+      {{checkout-button model=model checkout='checkout'}}
     </div>
 
     <div>
